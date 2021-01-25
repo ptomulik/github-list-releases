@@ -1,0 +1,29 @@
+---
+name: Build
+
+on:
+    - pull_request
+    - push
+
+jobs:
+    build:
+        name: Build Test
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/setup-node@v1
+              with:
+                  node-version: 12.x
+            - uses: actions/checkout@v2
+            - run: npm ci
+            - run: npm run build
+            - name: Detect Changes
+              run: |
+                if ! __tests__/verify-no-unstaged-changes.sh; then
+                    echo '-----------------------------------------';
+                    echo 'Troubleshooting';
+                    echo '-----------------------------------------';
+                    echo '::error::Locally try running: git clean -ffdx && npm ci && npm run -- build';
+                    false;
+                fi
+
+# vim: set ft=yaml ts=4 sw=4 sts=2:
