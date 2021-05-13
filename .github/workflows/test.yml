@@ -1,0 +1,35 @@
+---
+name: Tests
+
+on:
+    - pull_request
+    - push
+
+jobs:
+    unit:
+        name: Unit Tests
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/setup-node@v1
+              with:
+                  node-version: 12.x
+            - uses: actions/checkout@v2
+            - run: npm ci
+            - run: npm run -- test:coverage
+            - name: Coveralls
+              uses: coverallsapp/github-action@master
+              with:
+                  github-token: ${{ secrets.GITHUB_TOKEN }}
+                  path-to-lcov: ./coverage/lcov.info
+    types:
+        name: Types Tests
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/setup-node@v1
+              with:
+                  node-version: 12.x
+            - uses: actions/checkout@v2
+            - run: npm ci
+            - run: npm run -- test:ts
+
+# vim: set ft=yaml ts=4 sw=4 sts=2:

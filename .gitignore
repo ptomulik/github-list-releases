@@ -22,9 +22,9 @@
 # npm
 node_modules/
 
+# intermediate
+lib/
+pkg/
+
 # jest
 /coverage/
-/__tests__/_temp/
-
-# typescript
-/lib/
