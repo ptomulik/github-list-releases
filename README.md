@@ -20,6 +20,46 @@ only few first records are required.
 
 ## Usage
 
+<table>
+<tbody valign=top align=left>
+<tr><th>
+Browsers
+</th><td width=100%>
+
+Load ``@ptomulik/octokit-paginate-rest-limit`` (and related modules)
+directly from [cdn.skypack.dev](https://cdn.skypack.dev)
+
+```html
+<script type="module">
+  import { Octokit } from "https://cdn.skypack.dev/@octokit/core";
+  import { paginateRest } from "https://cdn.skypack.dev/@octokit/plugin-paginate-rest";
+  import { limit, adjust, MapFunction } from "https://cdn.skypack.dev/@ptomulik/octokit-paginate-rest-limit";
+</script>
+```
+
+</td></tr>
+<tr><th>
+Node
+</th><td>
+
+Install ``@ptomulik/octokit-paginate-rest-limit`` (and related modules) with
+
+```console
+npm install @ptomulik/octokit-paginate-rest-limit @octokit/plugin-paginate-rest @octokit/core
+```
+
+then import modules in your code
+
+```typescript
+import { Octokit } from "@octokit/core";
+import { paginateRest } from "@octokit/plugin-paginate-rest";
+import { limit, adjust, MapFunction } from "@ptomulik/octokit-paginate-rest-limit";
+```
+
+</td></tr>
+</tbody>
+</table>
+
 ### Applying limit
 
 ```typescript
@@ -72,7 +112,7 @@ octokit
   });
 ```
 
-### Adjusting request paramaters
+### Adjusting request parameters
 
 Pagination parameters may be adjusted with ``adjust(max, parameters)``.
 This operation adjusts ``per_page`` property of ``parameters`` to avoid
