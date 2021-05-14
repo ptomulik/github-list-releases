@@ -4,6 +4,7 @@
 ![build](https://github.com/ptomulik/octokit-paginate-rest-limit/workflows/Build/badge.svg?branch=master)
 ![code](https://github.com/ptomulik/octokit-paginate-rest-limit/workflows/Code%20Quality/badge.svg?branch=master)
 [![coverage](https://coveralls.io/repos/github/ptomulik/octokit-paginate-rest-limit/badge.svg?branch=master)](https://coveralls.io/github/ptomulik/octokit-paginate-rest-limit?branch=master)
+[![@latest](https://img.shields.io/npm/v/@ptomulik/octokit-paginate-rest-limit.svg)](https://www.npmjs.com/package/@ptomulik/octokit-paginate-rest-limit)
 
 ### Description
 
