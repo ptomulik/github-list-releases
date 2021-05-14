@@ -39,6 +39,9 @@
     "tsd": "^0.15.1",
     "typescript": "^4.2.4"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "@pika/pack": {
     "pipeline": [
       [
