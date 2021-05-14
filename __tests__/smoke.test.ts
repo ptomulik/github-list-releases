@@ -1,4 +1,4 @@
-import { limit, adjust } from "../src";
+import { limit, adjust, VERSION } from "../src";
 
 describe("smoke test", () => {
   describe("limit(0)({data: [0]}, () => undefined)", () => {
@@ -28,6 +28,13 @@ describe("smoke test", () => {
     it("returns { }", () => {
       expect.assertions(1);
       expect(adjust(101, {})).toStrictEqual({});
+    });
+  });
+
+  describe("version", () => {
+    it("the VERSION is '0.0.0-development'", () => {
+      expect.assertions(1);
+      expect(VERSION).toStrictEqual("0.0.0-development");
     });
   });
 });
