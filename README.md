@@ -1,9 +1,9 @@
 # Paginate Rest Limit
 
-![tests](https://github.com/ptomulik/octokit-paginate-rest-limit/workflows/Tests/badge.svg?branch=master)
-![build](https://github.com/ptomulik/octokit-paginate-rest-limit/workflows/Build/badge.svg?branch=master)
-![code](https://github.com/ptomulik/octokit-paginate-rest-limit/workflows/Code%20Quality/badge.svg?branch=master)
-[![coverage](https://coveralls.io/repos/github/ptomulik/octokit-paginate-rest-limit/badge.svg?branch=master)](https://coveralls.io/github/ptomulik/octokit-paginate-rest-limit?branch=master)
+![tests](https://github.com/ptomulik/octokit-paginate-rest-limit.ts/workflows/Tests/badge.svg?branch=master)
+![build](https://github.com/ptomulik/octokit-paginate-rest-limit.ts/workflows/Build/badge.svg?branch=master)
+![code](https://github.com/ptomulik/octokit-paginate-rest-limit.ts/workflows/Code%20Quality/badge.svg?branch=master)
+[![coverage](https://coveralls.io/repos/github/ptomulik/octokit-paginate-rest-limit.ts/badge.svg?branch=master)](https://coveralls.io/github/ptomulik/octokit-paginate-rest-limit.ts?branch=master)
 [![semantic-release](https://img.shields.io/badge/%20%20%F0%9F%93%A6%F0%9F%9A%80-semantic--release-e10079.svg)](https://github.com/semantic-release/semantic-release)
 [![@latest](https://img.shields.io/npm/v/@ptomulik/octokit-paginate-rest-limit.svg)](https://www.npmjs.com/package/@ptomulik/octokit-paginate-rest-limit)
 
@@ -16,7 +16,7 @@ The [paginate](https://github.com/octokit/plugin-paginate-rest.js#octokitpaginat
 method provided by [@octokit/plugin-paginate-rest.js](https://github.com/octokit/plugin-paginate-rest.js)
 fetches all available entries page-by-page and returns them gathered into a
 single array. The
-[octokit-paginate-rest-limit](https://github.com/ptomulik/octokit-paginate-rest-limit)
+[octokit-paginate-rest-limit.ts](https://github.com/ptomulik/octokit-paginate-rest-limit.ts)
 allows to reduce the number of entries returned (and pages fetched) when
 only few first records are required.
 
